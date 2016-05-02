@@ -1,0 +1,8 @@
+1. 写一个程序，在一个给定的语料库上训练一个tri-gram语言模型
+
+2. 根据这个语言模型，生成一个1000个单词的文本
+
+3. 下载一个rnn lstm，在给定文本中训练一个neural language model，然后根据该model生成一段文本
+
+http://karpathy.github.io/2015/05/21/rnn-effectiveness/
+https://github.com/karpathy/char-rnn

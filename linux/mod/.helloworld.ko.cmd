@@ -1,0 +1,1 @@
+cmd_/home/ljp/ljp/linux/mod/helloworld.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/ljp/ljp/linux/mod/helloworld.ko /home/ljp/ljp/linux/mod/helloworld.o /home/ljp/ljp/linux/mod/helloworld.mod.o
