@@ -1,0 +1,2 @@
+#!/usr/bin/bash
+curl -F username=1327405063 -F password=MjgxNjEz http://a.suda.edu.cn/index.php/index/login
