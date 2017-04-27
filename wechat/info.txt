@@ -1,2 +1,0 @@
-AppID: wxeffdd210381b5674
-AppSecret: f4f4dc1cf058a031c972105df57eb74a
