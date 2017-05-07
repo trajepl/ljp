@@ -106,11 +106,11 @@ func (list *linkList) str() string {
 }
 
 // test
-func main() {
-	linklist := &linkList{}
-	linklist.add(123, "a", []int{1, 2, 3})
-	linklist.insert(1, "postion 1")
-	linklist.remove(2)
-	fmt.Printf("%v", linklist.get(2))
-	print(linklist.str())
-}
+// func main() {
+// 	linklist := &linkList{}
+// 	linklist.add(123, "a", []int{1, 2, 3})
+// 	linklist.insert(1, "postion 1")
+// 	linklist.remove(2)
+// 	fmt.Printf("%v", linklist.get(2))
+// 	print(linklist.str())
+// }
