@@ -1,2 +1,15 @@
 #!/usr/bin/bash
 curl -F username=1327405063 -F password=MjgxNjEz http://a.suda.edu.cn/index.php/index/login
+
+function networkAndFtp(){
+    timeout=5
+    target=www.baidu.com
+
+    ret_code=`curl -I -s --connect-timeout $timeout $target -w %{http_code} | tail -n1`
+
+    if [ "x$ret_code" = "x200" ]; then
+    else
+        curl -F username=1327405063 -F password=MjgxNjEz http://a.suda.edu.cn/index.php/index/login
+        #网络不畅通
+    fi
+}
