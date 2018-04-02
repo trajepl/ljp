@@ -10,7 +10,7 @@ function networkAndFtp(){
     if [ "x$ret_code" != "x200" ] 
     then
         curl -F username=20174227013 -F password=dHJhamVwbDEyMw== http://a.suda.edu.cn/index.php/index/login
-        echo "reconnect the web at " `date` >> ./webinfo.log
+        echo "reconnect the web at " `date` >> ~/git-repo/ljp/linux/webinfo.log
     fi
 }
 
