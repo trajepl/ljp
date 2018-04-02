@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-curl -F username=1327405063 -F password=MjgxNjEz http://a.suda.edu.cn/index.php/index/login
+# curl -F username=20174227013 -F password=dHJhamVwbDEyMw== http://a.suda.edu.cn/index.php/index/login
 
 function networkAndFtp(){
     timeout=5
@@ -7,9 +7,14 @@ function networkAndFtp(){
 
     ret_code=`curl -I -s --connect-timeout $timeout $target -w %{http_code} | tail -n1`
 
-    if [ "x$ret_code" = "x200" ]; then
-    else
-        curl -F username=1327405063 -F password=MjgxNjEz http://a.suda.edu.cn/index.php/index/login
-        #网络不畅通
+    if [ "x$ret_code" != "x200" ] 
+    then
+        curl -F username=20174227013 -F password=dHJhamVwbDEyMw== http://a.suda.edu.cn/index.php/index/login
+        echo "reconnect the web at " `date` >> ./webinfo.log
     fi
 }
+
+while true
+do
+    networkAndFtp
+done
