@@ -1,0 +1,13 @@
+# use mail of tencent to send mail in linux
+# first you need to open smtp service in mail of tencent(google)
+# add following line into /etc/mail.rc
+set from=xxx@qq.com
+set smtp=smtp.qq.com
+set smtp-auth-user=xxx@qq.com
+set smtp-auth-password=xxxxxx
+set smtp-auth=login
+
+# ssl
+set smtp-use-starttls             
+set ssl-verify=ignore              
+set nss-config-dir=/etc/pki/nssdb/      
