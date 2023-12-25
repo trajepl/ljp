@@ -45,7 +45,23 @@ local plugins = {
     { 'github/copilot.vim', },
     { 'nvim-tree/nvim-tree.lua' },
     { 'nvim-tree/nvim-web-devicons' },
-    { 'dense-analysis/ale' }
+    { 'dense-analysis/ale' },
+    { 'ryanoasis/vim-devicons' },
+    { 'yochem/autosplit.nvim' },
+    {'romgrk/barbar.nvim',
+      dependencies = {
+        'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
+        'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
+      },
+      init = function() vim.g.barbar_auto_setup = false end,
+      opts = {
+        -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
+        -- animation = true,
+        -- insert_at_start = true,
+        -- …etc.
+      },
+      version = '^1.0.0', -- optional: only update when a new 1.x version is released
+    },
 }
 local opts = {
 }
@@ -67,20 +83,3 @@ configs.setup({
 require("catppuccin").setup()
 vim.cmd.colorscheme "catppuccin"
 
-local nvim_tree = require("nvim-tree")
-nvim_tree.setup({
-  sort = {
-    sorter = "case_sensitive",
-  },
-  view = {
-    width = 30,
-  },
-  renderer = {
-    group_empty = true,
-  },
-  filters = {
-    dotfiles = true,
-  },
-})
-
-vim.keymap.set('n', '<leader>tb', vim.cmd.NvimTreeToggle, {})
